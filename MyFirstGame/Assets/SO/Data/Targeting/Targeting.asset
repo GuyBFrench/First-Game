@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aae9c8a0901eec49bfc0cf2b12b53e2, type: 3}
-  m_Name: Planet1
+  m_Script: {fileID: 11500000, guid: de121cbc490ecff40830eee2d7968040, type: 3}
+  m_Name: Targeting
   m_EditorClassIdentifier: 
-  value: {x: 0, y: 0, z: 0}
+  colorIDList:
+  - {fileID: 11400000, guid: e9a7dcf68c11f1f47838e948c5689b22, type: 2}
+  currentColor: {fileID: 11400000, guid: e9a7dcf68c11f1f47838e948c5689b22, type: 2}

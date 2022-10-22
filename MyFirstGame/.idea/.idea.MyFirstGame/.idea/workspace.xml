@@ -12,8 +12,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MyTools/Scripts/ChangeTargetPlanetBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/NavAgentBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OrbitBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TransformBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vector3Data.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -79,7 +81,9 @@
       <updated>1665596722973</updated>
       <workItem from="1665596773964" duration="4100000" />
       <workItem from="1665716004550" duration="7277000" />
-      <workItem from="1665874503886" duration="3030000" />
+      <workItem from="1665874503886" duration="4053000" />
+      <workItem from="1666202214140" duration="2671000" />
+      <workItem from="1666386939034" duration="7701000" />
     </task>
     <servers />
   </component>

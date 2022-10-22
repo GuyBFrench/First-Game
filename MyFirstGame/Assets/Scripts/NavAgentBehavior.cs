@@ -11,6 +11,11 @@ public class NavAgentBehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
     }
+
+    public void ChangeDestination(Vector3Data newLoc)
+    {
+        playerLoc = newLoc;
+    }
     
     void Update()
     {
