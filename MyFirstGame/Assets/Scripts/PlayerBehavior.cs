@@ -1,19 +1,53 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class PlayerBehavior : MonoBehaviour
 {
+    private PlayerController playerController;
+    private InputAction moveAction;
+    
     [SerializeField] float speed = 6.0f;
     
     public bool canPlay;
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+    private float playerSpeed = 0.01f;
+    private float jumpHeight = 1.0f;
+    private float gravityValue = -9.81f;
+
+
+    private void Awake()
+        {
+            playerController = new PlayerController();
+            controller = GetComponent<CharacterController>();
+        }
     
-    // Start is called before the first frame update
-    void Start()
+
+    void Update()
     {
-        
+
+        Vector2 movementInput = playerController.Player.Move.ReadValue<Vector2>();
+        Vector3 move = new Vector3(movementInput.x, movementInput.y, 0f);
+        controller.Move(move * Time.deltaTime * playerSpeed);
+
+        if (move != Vector3.zero)
+        {
+            gameObject.transform.forward = move;
+        }
+
+        controller.Move(playerVelocity * Time.deltaTime);
+
     }
     
+    private void OnEnable()
+    {
+        moveAction = playerController.Player.Move;
+        moveAction.Enable();
+    }
+
     public bool CanRun
     {
         get => canPlay;
@@ -21,7 +55,7 @@ public class PlayerBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(canPlay == true)
         {
@@ -46,6 +80,7 @@ public class PlayerBehavior : MonoBehaviour
         }
             
     }
+    */
 
     private void OnCollisionEnter(Collision collision)
     {
