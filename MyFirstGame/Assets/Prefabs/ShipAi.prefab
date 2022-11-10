@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aabcda704bfaca49ac22e455bc7eccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLoc: {fileID: 11400000, guid: 43fec73856892d749991e0dffedcf592, type: 2}
+  playerLoc: {fileID: 11400000, guid: 3716e39986a6bd141b06ada192e92d39, type: 2}
 --- !u!114 &8151827680893238320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
       m_Calls: []
   idObj: {fileID: 0}
   colorIDDataListObj: {fileID: 11400000, guid: a647856352e18b74eabb66bdb32dc63a, type: 2}
+  SetGreen: {fileID: 0}
 --- !u!54 &-212607786307642281
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class Instancer : ScriptableObject
     public void CreateInstance(Vector3Data obj)
     {
         Instantiate(prefab, obj.value, Quaternion.identity);
-        Debug.Log("Instance");
     }
 
     public void CreateInstanceFromList(Vector3DataList obj)

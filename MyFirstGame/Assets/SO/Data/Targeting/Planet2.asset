@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e4a131dd50c24d8b24e4ffc52d31e, type: 3}
   m_Name: Planet2
   m_EditorClassIdentifier: 
-  value: {r: 1, g: 0, b: 0, a: 1}
+  value: {r: 0, g: 0.4528302, b: 0.010242138, a: 1}

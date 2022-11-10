@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R5CNB014XLF",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 21730,
+        "processId": 22561,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -18,6 +18,18 @@
             "deviceId": "R5CNB014XLF",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 21730,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CNB014XLF",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 19665,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CNB014XLF",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 22561,
             "exited": false
         }
     ],

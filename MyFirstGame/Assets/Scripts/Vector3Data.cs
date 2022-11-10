@@ -11,4 +11,9 @@ public class Vector3Data : ScriptableObject
     {
         value = v3;
     }
+
+    public void UpdateValue(Vector3Data newValue)
+    {
+        value = newValue.value;
+    }
 }

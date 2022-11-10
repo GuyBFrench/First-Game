@@ -5,6 +5,7 @@ using UnityEngine.Events;
 [CreateAssetMenu]
 public class IntData1 : ScriptableObject
 {
+    public UnityEvent maxValueEvent, minValueEvent;
     public int value;
 
     public void SetValue(int num)
@@ -32,6 +33,20 @@ public class IntData1 : ScriptableObject
     public void UpdateValue(int num)
     {
         value += num;
+    }
+    
+    public void CheckMinValue(int minValue)
+    {
+        if (!(value < minValue)) return;
+        minValueEvent.Invoke();
+        value = minValue;
+    }
+
+    public void CheckMaxValue(int maxValue)
+    {
+        if (!(value >= maxValue)) return;
+        maxValueEvent.Invoke();
+        value = maxValue;
     }
     
 }

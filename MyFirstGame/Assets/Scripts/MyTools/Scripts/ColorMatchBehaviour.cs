@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ColorMatchBehaviour : MatchBehavior
 {
-    public ColorIDDataList colorIDDataListObj;
+    public ColorIDDataList colorIDDataListObj, SetGreen;
+    
     
 
     private void Awake()
