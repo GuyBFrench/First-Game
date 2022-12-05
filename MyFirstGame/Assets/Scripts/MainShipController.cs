@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MainShipController : MonoBehaviour
 {
-
+    public bool canRun;
     private Vector2 moveInput;
     private Rigidbody2D rb;
     public float moveSpeed = 25f; 
@@ -16,9 +13,19 @@ public class MainShipController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    public bool CanRun
+    {
+        get => canRun;
+        set => canRun = value;
+    }
+
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveInput * (moveSpeed * Time.fixedDeltaTime));
+        if (canRun)
+        {
+            rb.MovePosition(rb.position + moveInput * (moveSpeed * Time.fixedDeltaTime));
+        }
+        
     }
 
     void OnMove(InputValue value)

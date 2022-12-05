@@ -23,7 +23,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TransformBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Vector3Data.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,7 +48,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Programs\Unity\2020.3.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2020.3.41f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\GitKraken\First Game\MyFirstGame&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="D:\GitKraken\First Game\MyFirstGame" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -98,6 +97,10 @@
       <workItem from="1667942387294" duration="6075000" />
       <workItem from="1668014054906" duration="3670000" />
       <workItem from="1668641113832" duration="1917000" />
+      <workItem from="1669529551128" duration="20000" />
+      <workItem from="1669529592919" duration="11000" />
+      <workItem from="1669529613204" duration="343000" />
+      <workItem from="1670212028883" duration="358000" />
     </task>
     <servers />
   </component>

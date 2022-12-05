@@ -35,6 +35,15 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Burst"",
+                    ""type"": ""Button"",
+                    ""id"": ""88656ecd-499b-462f-9c69-bf0616e50d9e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,28 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8cad7dfa-47d0-477b-85a6-0e98336fd89c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Burst"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""32e552e8-f464-4b3b-965c-3f895c36c473"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Burst"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +88,7 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Burst = m_Player.FindAction("Burst", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -117,11 +149,13 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Burst;
     public struct PlayerActions
     {
         private @PlayerController m_Wrapper;
         public PlayerActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Burst => m_Wrapper.m_Player_Burst;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -134,6 +168,9 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMove;
+                @Burst.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBurst;
+                @Burst.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBurst;
+                @Burst.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBurst;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -141,6 +178,9 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Burst.started += instance.OnBurst;
+                @Burst.performed += instance.OnBurst;
+                @Burst.canceled += instance.OnBurst;
             }
         }
     }
@@ -148,5 +188,6 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnBurst(InputAction.CallbackContext context);
     }
 }

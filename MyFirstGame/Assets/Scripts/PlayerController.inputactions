@@ -11,7 +11,17 @@
                     "id": "c9e07c8a-c250-4f54-8141-4a8f59496d19",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Burst",
+                    "type": "Button",
+                    "id": "88656ecd-499b-462f-9c69-bf0616e50d9e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -23,6 +33,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8cad7dfa-47d0-477b-85a6-0e98336fd89c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Burst",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32e552e8-f464-4b3b-965c-3f895c36c473",
+                    "path": "<Keyboard>/space",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Burst",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
